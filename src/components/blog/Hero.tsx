@@ -1,7 +1,7 @@
-import React from 'react'
-import Header from './common/Header'
-import Image from 'next/image';
-import BlogCards from './BlogCards';
+import React from "react";
+import Header from "../common/Header";
+import Image from "next/image";
+import BlogCards from "./BlogCards";
 const Hero = () => {
   return (
     <div className="relative">
@@ -18,15 +18,15 @@ const Hero = () => {
           Unlock Knowledge with Our{" "}
           <span className="text-lightGreen"> Featured Articles </span>
         </h1>
-        <p className='text-white opacity-70 text-base text-center max-w-[638px] mx-auto font-normal leading-6 '>
+        <p className="text-white opacity-70 text-base text-center max-w-[638px] mx-auto font-normal leading-6 ">
           Explore our latest articles, insights, and expert advice on industry
           trends. Stay informed, gain new perspectives, and discover valuable
           tips to help you stay ahead.
-              </p>
-              <BlogCards/>
+        </p>
+        <BlogCards />
       </div>
     </div>
   );
-}
+};
 
-export default Hero
+export default Hero;
