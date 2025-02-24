@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../common/Header";
 import Image from "next/image";
 import BlogCards from "./BlogCards";
+import LatestArticles from "./LatestArticles";
 const Hero = () => {
   return (
     <div className="relative">
@@ -24,6 +25,7 @@ const Hero = () => {
           tips to help you stay ahead.
         </p>
         <BlogCards />
+        <LatestArticles/>
       </div>
     </div>
   );

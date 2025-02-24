@@ -36,6 +36,7 @@ const BlogCards = () => {
             alt="search-icon"
             width={18}
             height={18}
+            className="pointer-events-none"
           />
         </label>
         <input
@@ -56,7 +57,7 @@ const BlogCards = () => {
               <Image
                 width={364}
                 height={237}
-                className="max-w-[364px] object-cover hover:scale-110 duration-300 ease-linear"
+                className="max-w-[364px] pointer-events-none object-cover hover:scale-110 duration-300 ease-linear"
                 src={obj.image}
                 alt="article image"
               />
@@ -65,7 +66,7 @@ const BlogCards = () => {
               {obj.date}
             </p>
             <div className="px-5">
-              <div className="w-full gap-6 flex items-center justify-center -mt-6 relative z-10">
+              <div className="w-full max-xl:flex-wrap gap-6 flex items-center justify-center -mt-6 relative z-30">
                 <CustomBtn
                   Text="Productivity"
                   myClass="py-[7px] px-[34.875px] bg-custom-black text-white shadow-none hover:text-custom-black hover:bg-white rounded-full text-sm leading-[21px] min-w-[154px]"
@@ -86,7 +87,7 @@ const BlogCards = () => {
                   <Image
                     width={50}
                     height={50}
-                    className="max-w-[50px] object-cover"
+                    className="max-w-[50px] object-cover pointer-events-none"
                     src={obj.authorImg}
                     alt="author image"
                   />
@@ -99,6 +100,7 @@ const BlogCards = () => {
                   width={20}
                   height={20}
                   alt="arrow"
+                  className="pointer-events-none"
                 />
               </div>
             </div>
