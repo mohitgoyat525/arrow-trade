@@ -7,10 +7,20 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    container: {
+      padding: "16px",
+      center: true,
+      screens: {
+        "2xl": "1140px",
+        lg: "992px",
+        md: "768px",
+        sm: "576px",
+        xs: "480px",
+      },
+    },
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        lightGreen: "#71CED0",
       },
     },
   },
