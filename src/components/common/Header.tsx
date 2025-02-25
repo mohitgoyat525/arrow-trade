@@ -16,7 +16,7 @@ const Header = () => {
   }, [open]);
   return (
     <div className="px-4 pt-4 max-sm:py-3 shadow-header-shadow">
-      <div className="max-w-[1220px] mx-auto flex justify-between items-center w-full py-4 bg-white bg-opacity-10 rounded-full pr-10 pl-[88px] border border-white border-opacity-15 max-lg:pl-12">
+      <div className="max-w-[1220px] mx-auto flex justify-between items-center w-full py-4 bg-white bg-opacity-10 rounded-full pr-10 pl-[88px] border border-white border-opacity-15 max-lg:pl-12 relative z-40">
         <Link href="#">
           <Image
             width={150.2}

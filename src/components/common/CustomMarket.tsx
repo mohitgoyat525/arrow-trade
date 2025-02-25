@@ -30,11 +30,7 @@ const CustomMarket = ({
         )}
 
         {/* Only render a text description if available */}
-        {description && (
-          <p className="text-base mt-4 mb-[30px] leading-6 text-lightGreen">
-            {description}
-          </p>
-        )}
+        {description && <Description className="mt-4" Text={description} />}
 
         {/* Mapping through the items if map is defined */}
         <div className="flex flex-col gap-y-5">

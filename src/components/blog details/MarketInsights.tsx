@@ -1,5 +1,5 @@
 import React from 'react'
-import CommonAIDriven from "../common/CustomMarket"
+import CustomMarket from "../common/CustomMarket"
 import Image from 'next/image';
 import {
   CHANGING_GAME_HEADING_LIST,
@@ -12,7 +12,7 @@ const MarketInsights = () => {
     <div className="flex justify-center items-center pb-[180px]">
       <div className="flex container relative max-w-[1140px] ">
         <div className="flex flex-col gap-y-[180px] ">
-          <CommonAIDriven
+          <CustomMarket
             map={MARKET_INSIGHTS_LIST}
             heading="What are AI-Driven "
             colorHeading="Market Insights?"
@@ -20,7 +20,7 @@ const MarketInsights = () => {
             image="/assets/images/webp/market-insights.webp"
           />
 
-          <CommonAIDriven
+          <CustomMarket
             map={CHANGING_GAME_LIST}
             heading="How AI-Driven Market insights are "
             colorHeading="Changing The Game"
@@ -28,7 +28,7 @@ const MarketInsights = () => {
           />
         </div>
         <div className="max-w-[485px] w-full flex justify-end">
-          <div className="bg-driven sticky top-1 max-w-[364px] w-full border border-solid border-cyan rounded-3xl py-[30px] max-h-[525px]">
+          <div className="bg-black border-lightGreen sticky top-1 max-w-[364px] w-full border border-solid border-cyan rounded-3xl py-[30px] max-h-[525px]">
             <div className="flex gap-4 px-5 items-center">
               <Image
                 src={"/assets/images/png/darellel-img.png"}
@@ -39,10 +39,10 @@ const MarketInsights = () => {
               <p className="font-semibold text-white leading-[150%] max-md:text-sm">
                 Darrell Steward
               </p>
-            </div>{" "}
+            </div>
             <div className="flex flex-col px-5  gap-y-4">
               <p className="font-semibold leading-[121%] mt-6 text-white max-md:text-sm">
-                What are AI-Driven Market Insights?
+                What are AI-Driven <br/><span className='text-lightGreen'> Market Insights?</span>
               </p>
               {MARKET_HEADING_LIST.map((item, index) => (
                 <p className="text-white/70 leading-[150%] max-md:text-sm">
