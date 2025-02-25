@@ -45,7 +45,7 @@ const LatestArticles = () => {
           >
             {ARTICLES_CARD_LIST.map((obj, i) => (
               <SwiperSlide key={i}>
-                <div className="relative w-full max-w-[364px] mx-auto border border-lightGreen rounded-[10px] bg-white bg-opacity-[0.03] pb-10 overflow-hidden">
+                <div className="relative w-full max-w-[364px] mx-auto border h-[498px] border-lightGreen rounded-[10px] bg-white bg-opacity-[0.03] pb-10 overflow-hidden">
                   <div className="max-w-[364px] overflow-hidden h-[237px]">
                     <Image
                       width={364}

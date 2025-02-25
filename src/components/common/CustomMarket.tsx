@@ -54,7 +54,7 @@ const CustomMarket = ({
               width={635}
               height={550}
               alt="images"
-              className="pointer-events-none max-lg:max-w-[635px]"
+              className="pointer-events-none lg:max-w-[635px] max-lg:max-w-full"
             />
           </div>
         </div>

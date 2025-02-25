@@ -58,7 +58,7 @@ const newBlogs: any = blogArray.length ? blogArray[0] : null;
               height={570}
               alt="blogs images"
               src={newBlogs.image}
-              className="object-cover xl:hidden mx-auto"
+              className="object-cover xl:hidden mx-auto mt-[50px]"
             />
           </div>
         </div>

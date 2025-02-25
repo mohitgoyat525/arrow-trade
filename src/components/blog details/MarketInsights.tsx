@@ -10,7 +10,7 @@ import {
 const MarketInsights = () => {
   return (
     <div className="flex justify-center items-center pb-[180px]">
-      <div className="flex container relative max-w-[1140px] ">
+      <div className="flex max-lg:flex-col container relative max-w-[1140px] ">
         <div className="flex flex-col gap-y-[180px] ">
           <CustomMarket
             map={MARKET_INSIGHTS_LIST}

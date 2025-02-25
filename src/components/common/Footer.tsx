@@ -41,7 +41,7 @@ const Footer = () => {
             </div>
           ))}
         </div>
-        <div className="flex items-center gap-6 pt-[50px] pb-[80px]">
+        <div className="flex items-center gap-6 pt-[50px] pb-[80px] max-xl:py-10 max-md:py-6">
           {FOOTER_SOCIAL_LINKS.map((obj, i) => (
             <Link key={i} target="_blank" href={obj.url}>
               <Image src={obj.image} alt="icons" width={40} height={40} />
@@ -50,7 +50,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="w-full bg-white h-[0.5px]"></div>
-      <p className="text-center text-base leading-6 font-normal text-white">
+      <p className="text-center text-base leading-6 font-normal text-white opacity-80 pt-4">
         Copyright © 2024 ArrowTrade. All Rights Reserved.
       </p>
     </div>
