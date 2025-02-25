@@ -9,14 +9,14 @@ import { Navigation, Pagination, } from "swiper/modules";
 
 const LatestArticles = () => {
     return (
-      <div className="relative pb-10">
+      <div className="relative pb-[180px] max-xl:pb-36 max-lg:pb-24 max-md:pb-16 max-sm:pb-10">
         <div className="container">
           <h2 className="font-normal text-5xl max-lg:text-4xl max-md:text-3xl max-sm:text-xl pb-[70px] max-lg:pb-10 max-md:pb-8 text-white text-center">
-            Latest{" "}
+            Latest
             <span className="font-semibold text-lightGreen"> Articles</span>
           </h2>
 
-          {/* Swiper Container */}
+  
           <Swiper
             loop={true}
             navigation={{
@@ -27,7 +27,7 @@ const LatestArticles = () => {
               clickable: true,
               el: ".swiper-pagination",
             }}
-            modules={[Navigation, Pagination,]}
+            modules={[Navigation, Pagination]}
             spaceBetween={20}
             slidesPerView={3}
             breakpoints={{
@@ -45,12 +45,12 @@ const LatestArticles = () => {
           >
             {ARTICLES_CARD_LIST.map((obj, i) => (
               <SwiperSlide key={i}>
-                <div className="relative w-full max-w-[364px] mx-auto border h-[498px] max-xl:h-full border-lightGreen rounded-[10px] bg-white bg-opacity-[0.03] pb-10 overflow-hidden">
-                  <div className="max-w-[364px] overflow-hidden h-[237px]">
+                <div className="relative w-full max-w-[364px] mx-auto max-lg:max-w-full border h-[498px] max-xl:h-full border-lightGreen rounded-[10px] bg-white bg-opacity-[0.03] pb-10 overflow-hidden">
+                  <div className="max-w-[364px] overflow-hidden h-[237px] max-lg:max-w-full max-lg:h-[350px] max-md:h-[237px]">
                     <Image
                       width={364}
                       height={237}
-                      className="max-w-[364px] pointer-events-none object-cover hover:scale-110 duration-300 ease-linear"
+                      className="max-w-[364px] pointer-events-none object-cover hover:scale-110 duration-300 ease-linear max-lg:max-w-full max-lg:w-full "
                       src={obj.image}
                       alt="article images"
                     />
@@ -72,7 +72,7 @@ const LatestArticles = () => {
                     <h2 className="text-white pt-6 pb-2.5 text-xl font-semibold leading-[24.4px]">
                       {obj.title}
                     </h2>
-                    <p className="text-white opacity-70 max-w-[323px] pb-6 text-base leading-6">
+                    <p className="text-white opacity-70 max-w-[323px] pb-6 text-base leading-6 max-lg:max-w-full">
                       {obj.description}
                     </p>
                     <div className="w-full flex justify-between items-center">
@@ -80,7 +80,7 @@ const LatestArticles = () => {
                         <Image
                           width={50}
                           height={50}
-                          className="max-w-[50px] object-cover pointer-events-none"
+                          className="max-w-[50px] object-cover pointer-events-none cursor-pointer"
                           src={obj.authorImg}
                           alt="author image"
                         />
@@ -93,7 +93,7 @@ const LatestArticles = () => {
                         width={20}
                         height={20}
                         alt="arrow"
-                        className="pointer-events-none"
+                        className="pointer-events-none cursor-pointer"
                       />
                     </div>
                   </div>
@@ -103,7 +103,7 @@ const LatestArticles = () => {
           </Swiper>
           <div className="swiper-pagination block xl:hidden"></div>
 
-          <div className="right-btn  absolute top-1/2 max-xl:hidden left-[45px] flex items-center justify-center size-[60px] min-w-[60px] rounded-full bg-lightGreen">
+          <div className="right-btn cursor-pointer absolute top-1/2 max-xl:hidden left-[45px] flex items-center justify-center size-[60px] min-w-[60px] rounded-full bg-lightGreen">
             <Image
               src="/assets/images/svg/right-arrow.svg"
               alt="right-arrow"
@@ -111,13 +111,32 @@ const LatestArticles = () => {
               height={27}
             />
           </div>
-          <div className="left-btn absolute top-1/2 max-xl:hidden right-[45px] flex items-center justify-center size-[60px] min-w-[60px] rounded-full bg-lightGreen">
+          <div className="left-btn cursor-pointer absolute top-1/2 max-xl:hidden right-[45px] flex items-center justify-center size-[60px] min-w-[60px] rounded-full bg-lightGreen">
             <Image
               src="/assets/images/svg/left-arrow.svg"
               alt="left-arrow"
               width={30}
               height={27}
             />
+          </div>
+
+          <div className="flex items-center xl:hidden gap-6 mt-5">
+            <div className="right-btn cursor-pointer  flex items-center justify-center size-[40px] min-w-[40px] rounded-full bg-lightGreen">
+              <Image
+                src="/assets/images/svg/right-arrow.svg"
+                alt="right-arrow"
+                width={30}
+                height={27}
+              />
+            </div>
+            <div className="left-btn cursor-pointer  flex items-center justify-center size-[40px] min-w-[40px] rounded-full bg-lightGreen">
+              <Image
+                src="/assets/images/svg/left-arrow.svg"
+                alt="left-arrow"
+                width={30}
+                height={27}
+              />
+            </div>
           </div>
         </div>
       </div>

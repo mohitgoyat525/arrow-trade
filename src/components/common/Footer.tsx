@@ -7,7 +7,9 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="bg-[url('/assets/images/webp/footer-bg.webp')] bg-center bg-cover bg-no-repeat py-[60px] max-sm:pt-12 relative">
-      <p className="absolute top-[34px] right-[60px] max-md:right-6"><TradeIcon/></p>
+      <p className="absolute top-[34px] right-[60px] max-md:right-6">
+        <TradeIcon />
+      </p>
       <div className="container max-w-[1140px] mx-auto flex flex-col relative z-10">
         <Link href="/">
           <Image
@@ -31,13 +33,13 @@ const Footer = () => {
         <div className="flex justify-center gap-y-[30px] max-md:gap-y-4 max-sm:gap-y-3 flex-col">
           {FOOTER_LIST.map((obj, index) => (
             <div key={index} className="flex flex-col gap-y-2.5">
-              <p className="text-white leading-[150%] font-semibold max-md:text-sm">
+              <p className="text-white leading-[150%] font-semibold text-base">
                 {obj.title}
               </p>
-              <p className="text-white opacity-80 font-normal text-base leading-6">
+              <p className="text-white opacity-80 font-normal text-base leading-6 max-md:text-sm">
                 {obj.description}
               </p>
-              <p className="text-white opacity-80 font-normal text-base leading-6">
+              <p className="text-white opacity-80 font-normal text-base leading-6 max-md:text-sm">
                 {obj.descriptionTwo}
               </p>
             </div>

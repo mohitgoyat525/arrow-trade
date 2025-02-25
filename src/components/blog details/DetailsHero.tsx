@@ -2,12 +2,12 @@
 import React from "react";
 import Header from "../common/Header";
 import Image from "next/image";
-import { useRouter } from "next/router";
 import { ARTICLES_CARD_LIST } from "@/utils/helper";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import "nprogress/nprogress.css";
 import NProgress from "nprogress";
+
 const DetailsHero = () => {
   const { tittle } = useParams();
       NProgress.start();
@@ -26,14 +26,10 @@ const newBlogs: any = blogArray.length ? blogArray[0] : null;
       {newBlogs ? (
         <div className="max-w-[1440px] mx-auto relative">
           <Header />
-          <div className="container mt-[91px] max-xl:pt-14 max-lg:pt-10 max-w-[1140px] mx-auto">
-            <div className="max-w-[481px]">
+          <div className="container mt-[91px] max-lg:mt-10 max-md:mt-5 max-sm:mt-0 max-xl:pt-14 max-lg:pt-10 max-w-[1140px] mx-auto">
+            <div className="max-w-[481px] max-lg:max-w-full">
               <h2 className="text-[64.09px] max-w-[718px] text-white max-lg:text-6xl max-md:text-5xl max-sm:text-4xl leading-[121%]">
                 {newBlogs.title}
-                <br />
-                <span className="!text-lightGreen hidden font-semibold max-sm:block">
-                  Market Insights
-                </span>
               </h2>
               <p className="text-base leading-6 pt-4 pb-[30px] text-white opacity-80 font-normal max-xl:max-w-none">
                 {newBlogs.description}

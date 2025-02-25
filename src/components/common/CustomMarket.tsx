@@ -19,7 +19,7 @@ const CustomMarket = ({
 }: AiDrivenProps) => {
   return (
     <div className="container mx-auto max-w-[1140px]">
-      <div className="max-w-[655px]">
+      <div className="max-w-[655px] max-lg:mx-auto max-lg:max-w-full">
         <h2 className="text-5xl max-lg:text-4xl max-md:text-3xl max-sm:text-2xl text-white leading-[121%]">
           {heading} <span className="text-lightGreen">{colorHeading}</span>
         </h2>
@@ -38,7 +38,7 @@ const CustomMarket = ({
             map.length > 0 &&
             map.map((item, index) => (
               <div key={index} className="flex flex-col gap-y-4">
-                <p className="text-white leading-[150%] font-semibold max-md:text-sm">
+                <p className="text-white leading-[150%] font-semibold max-md:text-sm max-lg:pt-4">
                   {item.title}
                 </p>
                 <Description Text={item.description} />
@@ -48,13 +48,13 @@ const CustomMarket = ({
 
         {/* Image */}
         <div className="mt-10 max-lg:mt-8 max-md:mt-5 max-sm:mt-3 rounded-[10px] bg-aiDriven !p-[1px]">
-          <div className="!bg-darkBlack p-2.5 max-w-[653px] rounded-[10px] w-full h-full">
+          <div className="!bg-darkBlack p-2.5 max-w-[653px] rounded-[10px] w-full h-full max-lg:mx-auto">
             <Image
               src={image}
               width={635}
               height={550}
               alt="images"
-              className="pointer-events-none lg:max-w-[635px] max-lg:max-w-full"
+              className="pointer-events-none lg:max-w-[635px] max-lg:max-w-full max-lg:mx-auto"
             />
           </div>
         </div>

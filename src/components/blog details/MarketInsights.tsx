@@ -9,9 +9,11 @@ import {
 } from "@/utils/helper";
 const MarketInsights = () => {
   return (
-    <div className="flex justify-center items-center pb-[180px]">
+    <div className="flex justify-center items-center pb-[180px] max-xl:pb-28 max-lg:pb-24 max-md:pb-16 max-sm:pb-10 relative">
+      <Image src='/assets/images/png/blog-cards-right-shadow.png' alt='shadow' width={237} height={237} className='w-full max-w-[237px] absolute top-0 right-0'/>
+      <Image src='/assets/images/png/blog-cards-right-shadow.png' alt='shadow' width={237} height={237} className='w-full max-w-[237px] absolute bottom-[-10%] right-0 '/>
       <div className="flex max-lg:flex-col container relative max-w-[1140px] ">
-        <div className="flex flex-col gap-y-[180px] ">
+        <div className="flex flex-col gap-y-[180px] max-xl:gap-16 max-lg:gap-14 max-md:gap-11 max-sm:gap-6">
           <CustomMarket
             map={MARKET_INSIGHTS_LIST}
             heading="What are AI-Driven "
@@ -27,8 +29,8 @@ const MarketInsights = () => {
             image="/assets/images/webp/changing-game.webp"
           />
         </div>
-        <div className="max-w-[485px] w-full flex justify-end">
-          <div className="bg-black border-lightGreen sticky top-1 max-w-[364px] max-xl:max-h-[563px] w-full border border-solid border-cyan rounded-3xl py-[30px] max-h-[525px]">
+        <div className="max-w-[485px] w-full flex justify-end max-lg:mx-auto max-lg:justify-center">
+          <div className="bg-black border-lightGreen sticky top-1 max-w-[364px] max-lg:max-w-full max-xl:max-h-[563px] w-full border border-solid border-cyan rounded-3xl py-[30px] max-h-[525px]">
             <div className="flex gap-4 px-5 items-center">
               <Image
                 src={"/assets/images/png/darellel-img.png"}
