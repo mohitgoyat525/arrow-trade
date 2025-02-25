@@ -280,19 +280,19 @@ export const FOOTER_SOCIAL_LINKS: socialMedia[] = [
     url: "https://www.facebook.com/",
   },
   {
-    image: "/assets/images/svg/facebook-icon.svg",
-    url: "https://www.facebook.com/",
+    image: "/assets/images/svg/instagram-icon.svg",
+    url: "https://www.instagram.com/",
   },
   {
-    image: "/assets/images/svg/facebook-icon.svg",
-    url: "https://www.facebook.com/",
+    image: "/assets/images/svg/youtube-icon.svg",
+    url: "https://www.youtube.com/",
   },
   {
-    image: "/assets/images/svg/facebook-icon.svg",
-    url: "https://www.facebook.com/",
+    image: "/assets/images/svg/tiktok-icon.svg",
+    url: "https://www.tiktok.com/",
   },
   {
-    image: "/assets/images/svg/facebook-icon.svg",
-    url: "https://www.facebook.com/",
+    image: "/assets/images/svg/linkdein-icon.svg",
+    url: "https://www.linkdin.com/",
   },
 ];

@@ -1,11 +1,11 @@
-import { FOOTER_LINKS_LIST, FOOTER_LIST } from "@/utils/helper";
+import { FOOTER_LINKS_LIST, FOOTER_LIST, FOOTER_SOCIAL_LINKS } from "@/utils/helper";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
   return (
-    <div className="bg-[url('/assets/images/webp/footer-bg.webp')] bg-cover bg-no-repeat py-[60px] max-sm:pt-12 px-5">
+    <div className="bg-[url('/assets/images/webp/footer-bg.webp')] bg-center bg-cover bg-no-repeat py-[60px] max-sm:pt-12">
       <div className="container max-w-[1140px] mx-auto flex flex-col">
         <Link href="/">
           <Image
@@ -41,7 +41,18 @@ const Footer = () => {
             </div>
           ))}
         </div>
+        <div className="flex items-center gap-6 pt-[50px] pb-[80px]">
+          {FOOTER_SOCIAL_LINKS.map((obj, i) => (
+            <Link key={i} target="_blank" href={obj.url}>
+              <Image src={obj.image} alt="icons" width={40} height={40} />
+            </Link>
+          ))}
+        </div>
       </div>
+      <div className="w-full bg-white h-[0.5px]"></div>
+      <p className="text-center text-base leading-6 font-normal text-white">
+        Copyright © 2024 ArrowTrade. All Rights Reserved.
+      </p>
     </div>
   );
 };

@@ -1,43 +1,46 @@
-"use client"
-import React from 'react'
-import Header from '../common/Header'
+"use client";
+import React from "react";
+import Header from "../common/Header";
 import Image from "next/image";
-import { useRouter } from "next/router";
-import { ARTICLES_CARD_LIST, } from "@/utils/helper";
+import { ARTICLES_CARD_LIST } from "@/utils/helper";
 import { useParams } from "next/navigation";
-import Link from 'next/link';
-const DetailsHero = () => {
-      const { title } = useParams();
+import Link from "next/link";
 
-      const blog = ARTICLES_CARD_LIST.find(
-        (obj) => obj.title.toLowerCase().replace(/\s+/g, "-") === title
-      );
+const DetailsHero = () => {
+  const { title } = useParams();
+
+const blogArray = ARTICLES_CARD_LIST.filter(
+  (obj) =>
+    obj && obj.title && obj.title.toLowerCase().replace(/\s+/g, "-") === title
+);
+
+const newBlogs: any = blogArray.length ? blogArray[0] : null; 
 
   return (
     <div className="pb-[271px]">
-      {blog ? (
+      {newBlogs ? ( 
         <div className="max-w-[1440px] mx-auto relative">
           <Header />
           <div className="container mt-[91px] max-w-[1140px] mx-auto">
             <div className="max-w-[481px]">
               <h2 className="text-[64.09px] max-w-[718px] text-white max-lg:text-6xl max-md:text-5xl max-sm:text-4xl leading-[121%]">
-                {blog.title}
+                {newBlogs.title}
                 <span className="text-cyan hidden font-semibold max-sm:block">
                   Market Insights
                 </span>
               </h2>
               <p className="text-base leading-6 text-lightGreen">
-                {blog.description}
+                {newBlogs.description}
               </p>
               <div className="gap-4 items-center flex">
                 <button className="py-[7px] px-[37px] whitespace-nowrap text-white/80 border border-solid border-cyan bg-darkGray rounded-[50px] text-sm leading-[150%]">
                   Productivity
                 </button>
                 <button className="py-[7px] px-[40px] whitespace-nowrap text-white/80 border border-solid bg-lightBlack border-white rounded-[50px] text-sm leading-[150%]">
-                  {blog.timeReamining}
+                  {newBlogs.timeReamining}
                 </button>
                 <p className="leading-[150%] font-semibold max-md:text-sm text-white">
-                  {blog.date}
+                  {newBlogs.date}
                 </p>
               </div>
             </div>
@@ -45,7 +48,7 @@ const DetailsHero = () => {
               width={720}
               height={570}
               alt="blogs image"
-              src={blog.image}
+              src={newBlogs.image}
               className="absolute h-[570px] object-cover top-0 right-0"
             />
           </div>
@@ -69,6 +72,6 @@ const DetailsHero = () => {
       )}
     </div>
   );
-}
+};
 
-export default DetailsHero
+export default DetailsHero;

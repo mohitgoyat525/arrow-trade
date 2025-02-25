@@ -16,11 +16,9 @@ const BlogCards = () => {
       setOpen(parseInt(param) * 3);
     }
   }, [searchParams]);
-
   const allCard = ARTICLES_CARD_LIST.slice(0, open).filter(
     (obj) => obj.title && obj.title.toLowerCase().includes(search.toLowerCase())
   );
-
   const handleShowMore = () => {
     const nextPage = open < ARTICLES_CARD_LIST.length ? open / 3 + 1 : 1;
     setOpen(nextPage * 3);
@@ -51,7 +49,7 @@ const BlogCards = () => {
         {allCard.map((obj, i) => (
           <Link
             key={i}
-            href={`/blogs/${obj.title.toLowerCase().replace(/ /g, "-")}`}
+            href={`/blog/${obj.title.toLowerCase().replace(/ /g, "-")}`}
           >
             <div className="relative w-full max-w-[364px] mx-auto border border-lightGreen rounded-[10px] bg-white bg-opacity-[0.03] pb-10 overflow-hidden">
               <div className="max-w-[364px] overflow-hidden h-[237px]">
