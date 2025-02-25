@@ -3,7 +3,8 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import CustomBtn from "../common/CustomBtn";
-import { HEADER_LIST } from "@/utils/helper";
+import { HEADER_LIST } from "@/utils/helper"; 
+
 
 const Header = () => {
   const [open, setOpen] = useState(false);

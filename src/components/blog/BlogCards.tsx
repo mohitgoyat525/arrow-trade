@@ -5,6 +5,8 @@ import React, { useState, useEffect } from "react";
 import CustomBtn from "../common/CustomBtn";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
+import NProgress from "nprogress";
+import "nprogress/nprogress.css";
 const BlogCards = () => {
   const [open, setOpen] = useState(3);
   const [search, setSearch] = useState("");
@@ -21,8 +23,9 @@ const BlogCards = () => {
   );
   const handleShowMore = () => {
     const nextPage = open < ARTICLES_CARD_LIST.length ? open / 3 + 1 : 1;
+    NProgress.start()
     setOpen(nextPage * 3);
-    window.history.pushState(null, "", `?blog/page=${nextPage}`);
+    window.history.pushState(null, "", `?blogs?/page=${nextPage}`);
   };
 
   return (
@@ -50,6 +53,7 @@ const BlogCards = () => {
           <Link
             key={i}
             href={`/blog/${obj.title.toLowerCase().replace(/ /g, "-")}`}
+          
           >
             <div className="relative w-full max-w-[364px] mx-auto border h-[498px] max-xl:h-full border-lightGreen rounded-[10px] bg-white bg-opacity-[0.03] pb-10 overflow-hidden">
               <div className="max-w-[364px] overflow-hidden h-[237px]">

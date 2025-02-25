@@ -28,7 +28,7 @@ const MarketInsights = () => {
           />
         </div>
         <div className="max-w-[485px] w-full flex justify-end">
-          <div className="bg-black border-lightGreen sticky top-1 max-w-[364px] w-full border border-solid border-cyan rounded-3xl py-[30px] max-h-[525px]">
+          <div className="bg-black border-lightGreen sticky top-1 max-w-[364px] max-xl:max-h-[563px] w-full border border-solid border-cyan rounded-3xl py-[30px] max-h-[525px]">
             <div className="flex gap-4 px-5 items-center">
               <Image
                 src={"/assets/images/png/darellel-img.png"}

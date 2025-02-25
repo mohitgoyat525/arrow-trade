@@ -12,7 +12,6 @@ export default function Home() {
     <>
       <Suspense fallback={<div>Loading...</div>}>
         <UsdJp />
-        <Header />
         <Hero />
         <BlogCards />
         <LatestArticles />

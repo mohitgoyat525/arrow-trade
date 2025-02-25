@@ -6,10 +6,14 @@ import { useRouter } from "next/router";
 import { ARTICLES_CARD_LIST } from "@/utils/helper";
 import { useParams } from "next/navigation";
 import Link from "next/link";
-
+import "nprogress/nprogress.css";
+import NProgress from "nprogress";
 const DetailsHero = () => {
   const { tittle } = useParams();
-
+      NProgress.start();
+      setTimeout(() => {
+        NProgress.done();
+      }, 400);
 const blogArray = ARTICLES_CARD_LIST.filter(
   (obj) =>
     obj && obj.title && obj.title.toLowerCase().replace(/\s+/g, "-") === tittle
@@ -34,7 +38,7 @@ const newBlogs: any = blogArray.length ? blogArray[0] : null;
               <p className="text-base leading-6 pt-4 pb-[30px] text-white opacity-80 font-normal max-xl:max-w-none">
                 {newBlogs.description}
               </p>
-              <div className="gap-4 items-center flex">
+              <div className="gap-4 items-center flex flex-wrap">
                 <button className="py-[7px] px-[37px] whitespace-nowrap text-white/80 border border-solid border-lightGreen bg-[#0F0D10] rounded-[50px] text-sm leading-[150%]">
                   Productivity
                 </button>

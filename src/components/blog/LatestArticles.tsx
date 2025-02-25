@@ -5,7 +5,7 @@ import Image from "next/image";
 import CustomBtn from "../common/CustomBtn";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { Navigation, Pagination,A11y } from "swiper/modules";
+import { Navigation, Pagination, } from "swiper/modules";
 
 const LatestArticles = () => {
     return (
@@ -27,17 +27,17 @@ const LatestArticles = () => {
               clickable: true,
               el: ".swiper-pagination",
             }}
-            modules={[Navigation, Pagination, A11y]}
+            modules={[Navigation, Pagination,]}
             spaceBetween={20}
             slidesPerView={3}
             breakpoints={{
               1024: {
                 slidesPerView: 3,
               },
-              992: {
+              769: {
                 slidesPerView: 2,
               },
-              375: {
+              320: {
                 slidesPerView: 1,
               },
             }}
@@ -45,14 +45,14 @@ const LatestArticles = () => {
           >
             {ARTICLES_CARD_LIST.map((obj, i) => (
               <SwiperSlide key={i}>
-                <div className="relative w-full max-w-[364px] mx-auto border h-[498px] border-lightGreen rounded-[10px] bg-white bg-opacity-[0.03] pb-10 overflow-hidden">
+                <div className="relative w-full max-w-[364px] mx-auto border h-[498px] max-xl:h-full border-lightGreen rounded-[10px] bg-white bg-opacity-[0.03] pb-10 overflow-hidden">
                   <div className="max-w-[364px] overflow-hidden h-[237px]">
                     <Image
                       width={364}
                       height={237}
                       className="max-w-[364px] pointer-events-none object-cover hover:scale-110 duration-300 ease-linear"
                       src={obj.image}
-                      alt="article image"
+                      alt="article images"
                     />
                   </div>
                   <p className="absolute top-5 right-8 text-white text-base font-semibold leading-6">
@@ -101,9 +101,9 @@ const LatestArticles = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-          <div className="swiper-pagination block lg:hidden"></div>
+          <div className="swiper-pagination block xl:hidden"></div>
 
-          <div className="right-btn absolute top-1/2 max-lg:hidden left-[45px] flex items-center justify-center size-[60px] min-w-[60px] rounded-full bg-lightGreen">
+          <div className="right-btn  absolute top-1/2 max-xl:hidden left-[45px] flex items-center justify-center size-[60px] min-w-[60px] rounded-full bg-lightGreen">
             <Image
               src="/assets/images/svg/right-arrow.svg"
               alt="right-arrow"
@@ -111,7 +111,7 @@ const LatestArticles = () => {
               height={27}
             />
           </div>
-          <div className="left-btn absolute top-1/2 max-lg:hidden right-[45px] flex items-center justify-center size-[60px] min-w-[60px] rounded-full bg-lightGreen">
+          <div className="left-btn absolute top-1/2 max-xl:hidden right-[45px] flex items-center justify-center size-[60px] min-w-[60px] rounded-full bg-lightGreen">
             <Image
               src="/assets/images/svg/left-arrow.svg"
               alt="left-arrow"
