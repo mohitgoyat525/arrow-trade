@@ -268,3 +268,31 @@ export const CHANGING_GAME_HEADING_LIST: string[] = [
   "Enhanced Accuracy and Predictive Power",
   "Customized Insights for Individual Strategies",
 ];
+
+interface socialMedia{
+  image: string;
+  url:string
+}
+
+export const FOOTER_SOCIAL_LINKS: socialMedia[] = [
+  {
+    image: "/assets/images/svg/facebook-icon.svg",
+    url: "https://www.facebook.com/",
+  },
+  {
+    image: "/assets/images/svg/facebook-icon.svg",
+    url: "https://www.facebook.com/",
+  },
+  {
+    image: "/assets/images/svg/facebook-icon.svg",
+    url: "https://www.facebook.com/",
+  },
+  {
+    image: "/assets/images/svg/facebook-icon.svg",
+    url: "https://www.facebook.com/",
+  },
+  {
+    image: "/assets/images/svg/facebook-icon.svg",
+    url: "https://www.facebook.com/",
+  },
+];
