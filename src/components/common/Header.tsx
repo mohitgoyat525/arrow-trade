@@ -42,7 +42,7 @@ const Header = () => {
                   }
                   activeHandler(i);
                 }}
-                className={`cursor-pointer text-base leading-[19.36px] duration-300 ease-linear opacity-70 ${
+                className={`cursor-pointer text-base leading-[19.36px] transition-all hover:opacity-100 hover:text-lightGreen duration-300 ease-linear opacity-70 ${
                   active === i
                     ? "text-lightGreen font-bold opacity-100"
                     : "text-white font-normal"

@@ -1,3 +1,4 @@
+import { TradeIcon } from "@/utils/Icons";
 import { FOOTER_LINKS_LIST, FOOTER_LIST, FOOTER_SOCIAL_LINKS } from "@/utils/helper";
 import Image from "next/image";
 import Link from "next/link";
@@ -5,8 +6,9 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="bg-[url('/assets/images/webp/footer-bg.webp')] bg-center bg-cover bg-no-repeat py-[60px] max-sm:pt-12">
-      <div className="container max-w-[1140px] mx-auto flex flex-col">
+    <div className="bg-[url('/assets/images/webp/footer-bg.webp')] bg-center bg-cover bg-no-repeat py-[60px] max-sm:pt-12 relative">
+      <p className="absolute top-[34px] right-[60px] max-md:right-6"><TradeIcon/></p>
+      <div className="container max-w-[1140px] mx-auto flex flex-col relative z-10">
         <Link href="/">
           <Image
             src="/assets/images/svg/header-logo.svg"

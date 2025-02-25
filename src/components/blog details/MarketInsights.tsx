@@ -42,7 +42,7 @@ const MarketInsights = () => {
             </div>
             <div className="flex flex-col px-5  gap-y-4">
               <p className="font-semibold leading-[121%] mt-6 text-white max-md:text-sm">
-                What are AI-Driven <br/><span className='text-lightGreen'> Market Insights?</span>
+                What are AI-Driven Market Insights?
               </p>
               {MARKET_HEADING_LIST.map((item, index) => (
                 <p className="text-white/70 leading-[150%] max-md:text-sm">

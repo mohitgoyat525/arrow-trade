@@ -39,10 +39,10 @@ const newBlogs: any = blogArray.length ? blogArray[0] : null;
                 {newBlogs.description}
               </p>
               <div className="gap-4 items-center flex flex-wrap">
-                <button className="py-[7px] px-[37px] whitespace-nowrap text-white/80 border border-solid border-lightGreen bg-[#0F0D10] rounded-[50px] text-sm leading-[150%]">
+                <button className="py-[7px] px-[37px] whitespace-nowrap text-white/80 border border-solid border-lightGreen bg-[#0F0D10] rounded-[50px] text-sm leading-[150%] transition-all ease-linear duration-300 hover:bg-lightGreen hover:text-white">
                   Productivity
                 </button>
-                <button className="py-[7px] px-[40px] whitespace-nowrap text-white/80 border border-solid bg-[#232224] border-white rounded-[50px] text-sm leading-[150%]">
+                <button className="py-[7px] px-[40px] whitespace-nowrap text-white/80 border border-solid bg-[#232224] border-white rounded-[50px] text-sm leading-[150%] transition-all ease-linear duration-300 hover:bg-lightGreen hover:text-white">
                   {newBlogs.timeReamining}
                 </button>
                 <p className="leading-[150%] font-semibold max-md:text-sm text-white">
