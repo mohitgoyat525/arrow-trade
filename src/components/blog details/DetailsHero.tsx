@@ -22,7 +22,7 @@ const newBlogs: any = blogArray.length ? blogArray[0] : null;
       {newBlogs ? (
         <div className="max-w-[1440px] mx-auto relative">
           <Header />
-          <div className="container mt-[91px] max-w-[1140px] mx-auto">
+          <div className="container mt-[91px] max-xl:pt-14 max-lg:pt-10 max-w-[1140px] mx-auto">
             <div className="max-w-[481px]">
               <h2 className="text-[64.09px] max-w-[718px] text-white max-lg:text-6xl max-md:text-5xl max-sm:text-4xl leading-[121%]">
                 {newBlogs.title}

@@ -7,11 +7,11 @@ import React from 'react'
 const page = () => {
     return (
       <>
-      <DetailsHero />
+            <DetailsHero />
             <MarketInsights />
             <LatestArticles />
             <Footer/>
-            </>
+     </>
   )
 }
 
