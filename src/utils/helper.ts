@@ -29,6 +29,16 @@ interface FooterList {
   descriptionTwo?: string;
 }
 
+interface ChangingGames {
+  title: string;
+  description: string;
+}
+
+interface MarketInsights {
+  title: string;
+  description: string;
+}
+
 export const HEADER_LIST: HeaderItem[] = [
   {
     name: "Home",
@@ -210,4 +220,51 @@ export const FOOTER_LIST: FooterList[] = [
     descriptionTwo:
       "Arrow Trade S.A.R.L (Lebanon) is the sole entity authorized to operate the MetaTrader platform under our license. No other companies are involved in the operation or management of our MetaTrader license.",
   },
+];
+
+export const MARKET_INSIGHTS_LIST: MarketInsights[] = [
+  {
+    title: "Real-Time Analytics",
+    description:
+      "AI can process and analyze data from various sources, such as financial statements, price movements, market sentiment, and even social media trends, providing instant feedback and analysis.",
+  },
+  {
+    title: "News Updates",
+    description:
+      "AI tools can sift through the noise of constant news flows and pinpoint stories that are most relevant to your investments. Whether it’s economic reports, geopolitical events, or corporate announcements, AI can identify which developments are likely to move markets.",
+  },
+  {
+    title: "Expert Market Research",
+    description:
+      "Advanced algorithms can synthesize historical data with current market trends to forecast potential outcomes, offering the insights of seasoned market experts at your fingertips.",
+  },
+];
+export const CHANGING_GAME_LIST: ChangingGames[] = [
+  {
+    title: "1. Faster Decision-Making",
+    description:
+      "In the world of trading and investing, speed is critical. AI systems can analyze millions of data points in seconds, giving you an edge in making quick decisions. For example, when news breaks about a company’s earnings report, AI systems can immediately assess the market’s reaction and provide insights on whether it's a buying or selling opportunity.",
+  },
+  {
+    title: "2. Enhanced Accuracy and Predictive Power",
+    description:
+      "Human traders and investors are often prone to cognitive biases, such as overconfidence or emotional decision-making. AI removes these limitations by relying solely on data and algorithms. With machine learning, AI can improve over time, identifying patterns and trends that humans may overlook. This leads to more accurate predictions about market movements, asset prices, and investment risks.",
+  },
+  {
+    title: "3. Customized Insights for Individual Strategies",
+    description:
+      "AI-driven analytics can tailor insights to your specific trading or investment strategy. Whether you’re a day trader looking for short-term opportunities or a long-term investor analyzing market fundamentals, AI can filter out irrelevant information and deliver insights that align with your goals. This level of personalization was previously unavailable in traditional market research.",
+  },
+];
+
+export const MARKET_HEADING_LIST: string[] = [
+  "Real-Time Analytics",
+  "News Updates",
+  "Expert Market Research",
+];
+
+export const CHANGING_GAME_HEADING_LIST: string[] = [
+  "Faster Decision-Making",
+  "Enhanced Accuracy and Predictive Power",
+  "Customized Insights for Individual Strategies",
 ];
