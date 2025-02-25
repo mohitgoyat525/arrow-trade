@@ -18,7 +18,7 @@ const BlogCards = () => {
       setOpen(parseInt(param) * 3);
     }
   }, [searchParams]);
-  const allCard = ARTICLES_CARD_LIST.slice(0, open).filter(
+  const ArticlesCards = ARTICLES_CARD_LIST.slice(0, open).filter(
     (obj) => obj.title && obj.title.toLowerCase().includes(search.toLowerCase())
   );
   const handleShowMore = () => {
@@ -48,12 +48,11 @@ const BlogCards = () => {
           className="bg-transparent outline-none placeholder:text-white placeholder:opacity-80 text-white opacity-80 placeholder:leading-6 leading-6"
         />
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-[1140px] mx-auto w-full pt-[70px]">
-        {allCard.map((obj, i) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:grid-cols-2 gap-6 max-w-[1140px] mx-auto w-full pt-[70px]">
+        {ArticlesCards.map((obj, i) => (
           <Link
             key={i}
             href={`/blog/${obj.title.toLowerCase().replace(/ /g, "-")}`}
-          
           >
             <div className="relative w-full max-w-[364px] mx-auto border h-[498px] max-xl:h-full border-lightGreen rounded-[10px] bg-white bg-opacity-[0.03] pb-10 overflow-hidden">
               <div className="max-w-[364px] overflow-hidden h-[237px]">
