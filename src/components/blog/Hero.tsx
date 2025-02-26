@@ -11,7 +11,7 @@ const Hero = () => {
         alt=""
         width={237}
         height={237}
-        className="absolute top-0 left-0 max-w-80 w-full"
+        className="absolute top-0 left-0 max-w-80 w-full pointer-events-none"
       />
       <Header/>
       <div>

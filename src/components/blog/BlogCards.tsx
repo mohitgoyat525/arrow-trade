@@ -30,7 +30,7 @@ const BlogCards = () => {
   const handleSearchChange = (e:any) => {
     const value = e.target.value;
     setSearch(value);
-    window.history.pushState(null, "", `?search=${value}&page=1`);
+    window.history.pushState(null, "", `?search=${value}&page`);
   };
 
   const handleShowMore = () => {
@@ -59,7 +59,7 @@ const BlogCards = () => {
             value={search}
             onChange={handleSearchChange}
             placeholder="Search"
-            className="bg-transparent outline-none placeholder:text-white placeholder:opacity-80 text-white opacity-80 placeholder:leading-6 leading-6"
+            className="bg-transparent outline-none w-full pr-3 placeholder:text-white placeholder:opacity-80 text-white opacity-80 placeholder:leading-6 leading-6"
           />
         </div>
 
@@ -147,7 +147,7 @@ const BlogCards = () => {
         alt="shadow"
         width={237}
         height={237}
-        className="object-cover absolute bottom-1/3 right-0 w-full max-w-[237px]"
+        className="object-cover absolute bottom-1/3 right-0 w-full max-w-[237px] pointer-events-none"
       />
     </div>
   );

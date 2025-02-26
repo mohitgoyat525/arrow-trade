@@ -6,7 +6,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="bg-[url('/assets/images/webp/footer-bg.webp')] bg-center bg-cover bg-no-repeat py-[60px] max-sm:pt-12 relative">
+    <div className="bg-footerBg bg-center bg-cover bg-no-repeat py-[60px] max-sm:pt-12 relative">
       <p className="absolute top-[34px] right-[60px] max-md:right-6">
         <TradeIcon />
       </p>

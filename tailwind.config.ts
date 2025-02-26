@@ -21,7 +21,13 @@ export default {
     extend: {
       colors: {
         lightGreen: "#71CED0",
+        lightGray: "#4C4C4C",
+        darkGreen: "#00C11F",
+        darkRed: "#D01314",
       },
+      backgroundImage: {
+        footerBg:"url('/assets/images/webp/footer-bg.webp')"
+      }
     },
   },
   plugins: [],

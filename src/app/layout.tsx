@@ -13,10 +13,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Arrow Trader",
+  title: "Arrow Trade",
   description: "Unlock Knowledge with Our Featured Articles",
   openGraph: {
-    title: "Arrow Trader",
+    title: "Arrow Trade",
     description: "Unlock Knowledge with Our Featured Articles",
     images: [
       {

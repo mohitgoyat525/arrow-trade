@@ -15,8 +15,7 @@ const LatestArticles = () => {
             Latest
             <span className="font-semibold text-lightGreen"> Articles</span>
           </h2>
-
-  
+          
           <Swiper
             loop={true}
             navigation={{
